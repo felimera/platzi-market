@@ -22,7 +22,7 @@ public class Compra {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
     @OneToMany(mappedBy = "producto")
-    private List<CompraProducto> compraProductos;
+    private List<CompraProducto> productos;
 
     public Integer getIdCompra() {
         return idCompra;
@@ -80,11 +80,11 @@ public class Compra {
         this.cliente = cliente;
     }
 
-    public List<CompraProducto> getCompraProductos() {
-        return compraProductos;
+    public List<CompraProducto> getProductos() {
+        return productos;
     }
 
-    public void setCompraProductos(List<CompraProducto> compraProductos) {
-        this.compraProductos = compraProductos;
+    public void setProductos(List<CompraProducto> productos) {
+        this.productos = productos;
     }
 }
